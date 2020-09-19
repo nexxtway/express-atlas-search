@@ -1,0 +1,18 @@
+{
+  "name": "express-atlas-search",
+  "version": "1.0.0",
+  "description": "Mongo Atlas Search Express Example",
+  "main": "index.js",
+  "author": "Reinier Guerra",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "markdown": "^0.5.0",
+    "mongodb": "^3.6.2"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
