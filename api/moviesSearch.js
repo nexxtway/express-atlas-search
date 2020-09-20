@@ -11,6 +11,9 @@ const moviesSearch = async (req, res) => {
                     path: ['title', 'plot'],
                     score: { boost: { value: 3 } },
                 },
+                highlight: {
+                    path: ['title', 'plot'],
+                }
             },
         },
         {
@@ -22,6 +25,7 @@ const moviesSearch = async (req, res) => {
                 genres: 1,
                 released: 1,
                 score: { $meta: 'searchScore' },
+                highlights: { $meta: 'searchHighlights' },
             },
         },{
             $limit: 25,
