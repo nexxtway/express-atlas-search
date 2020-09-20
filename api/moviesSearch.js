@@ -18,8 +18,13 @@ const moviesSearch = async (req, res) => {
                 _id: 0,
                 title: 1,
                 plot: 1,
+                rated: 1,
+                genres: 1,
+                released: 1,
                 score: { $meta: 'searchScore' },
             },
+        },{
+            $limit: 25,
         }], (_err, result) => {
             result.toArray((_err, docs) => {
                 return res.send(docs);
